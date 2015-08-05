@@ -3,6 +3,12 @@
 #include <fstream>
 using namespace std;
 
+/*
+Question description:
+The file "IntegerArray.txt" contains all of the 100,000 integers between 1 and 100,000 (inclusive) in some order, with no integer repeated.
+Your task is to compute the number of inversions in the file given, where the ith row of the file indicates the i_th entry of an array.
+*/
+
 long long mergeAndCount(vector<int> &arr, vector<int> &temp, int low, int mid, int high){
     int indexL = low;       //index of left half of array
     int indexR = mid + 1;   //index of right half of array

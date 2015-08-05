@@ -3,6 +3,24 @@
 #include <vector>
 using namespace std;
 
+/*
+Question description:
+The file "inputText.txt" contains all of the integers between 1 and 10,000 (inclusive, with no repeats) in unsorted order. 
+The integer in the i_th row of the file gives you the i_th entry of an input array.
+
+Your task is to compute the total number of comparisons used to sort the given input file by QuickSort.
+As you know, the number of comparisons depends on which elements are chosen as pivots, so we'll ask you to explore three different pivoting rules.
+
+WARNING: The Partition subroutine can be implemented in several different ways, and different implementations can give you differing numbers of comparisons. 
+For this problem, you should implement the Partition subroutine exactly as it is described in the video lectures.
+
+Pivoting rules:
+For question1, always use the first element of the array as the pivot element.
+For question2, always use the final element of the given array as the pivot element.
+For question3, use the "median-of-three" pivot rule as follows. Consider the first, middle, and final elements of the given array.
+Identify which of these three elements is the median (i.e., the one whose value is in between the other two), and use this as your pivot.
+*/
+
 int choosePivot(const vector<int> &A,const int low,const int high,const int qnum){
     if (qnum == 1)
         return low;
