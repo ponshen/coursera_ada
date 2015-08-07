@@ -1,11 +1,21 @@
+/*
+Question description:
+The file contains the edges of a directed graph. Vertices are labeled as positive integers from 1 to 12.
+Every row indicates an edge, the vertex label in first column is the tail and the vertex label in second column is the head.
+
+Your task is to code up the algorithm from the video lectures for computing strongly connected components (SCCs), and to run this algorithm on the given graph.
+You should output the sizes of the 5 largest SCCs in the given graph, in decreasing order of sizes.
+If your algorithm finds less than 5 SCCs, then write 0 for the remaining terms.
+*/
+
 #include<iostream>
 #include<vector>
 #include<fstream>
 #include<algorithm>
 using namespace std;
-const char* input_name = "SCC.txt";
+const char* input_name = "small_input.txt";
+const int n = 12, k = 5;
 
-const int n = 875714, k = 5;
 vector<int> order(n, 0);
 vector<int> ftime(n, 0);
 vector<int> leader(n, 0);
