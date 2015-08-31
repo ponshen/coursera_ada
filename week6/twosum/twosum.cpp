@@ -24,12 +24,15 @@ void twosum(){
     unordered_multimap<long long,long long> table;
     vector<bool> found(width, false);
     long long integer = 0, key = 0;
+    /*Read input file and insert the integers into hash table with key value = (integer/10000)*/
     ifstream ifs(input_file,ios::in);
     while( ifs.good() ){
         ifs>>integer;
         key = integer / scale;
         table.insert( pair<long long,long long>(key,integer) );
     }
+    /*Target: x+y=t, x and y are in the input array and distinct, and t lies in [-10000,10000]*/
+    /*If x and y satisfying the condition, key(x) and */
     cout<<"Counting two-sum's..."<<endl;
     unordered_multimap<long long,long long>::local_iterator itx, ity;
     long long x = 0, y = 0, k = 0, sum = 0;
